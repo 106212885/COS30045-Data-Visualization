@@ -1,64 +1,25 @@
 # COS30045 – Data Visualisation  
 ## Exercise 0.2 – Energy Website
 
-Welcome to **Exercise 0.2** for COS30045 Data Visualisation.
+## Generative AI Reflection
 
-In this exercise, you will build a simple **Energy Data Webpage** using **HTML, CSS, and JavaScript**. The purpose of this exercise is to familiarise you with the development workflow using **GitHub and VS Code**, while preparing the foundation for future data visualisation tasks.
+### Which Tool(s) Used
+* Google Gemini
 
----
+### What GenAI Was Used For
+* Guiding and generate semantic HTML5 templates for three pages site navigation (`index.html`, `televisions.html`, `about.html`).
+* Created HTML page templates and CSS styling matched to the logo palette.
+* Structuring in JavaScript (`main.js`) for the interactive FAQ accordion.
+* Troubleshooting Git deployment and commit issues in GitHub Desktop.
 
-# Objective
+### What Was Changed or Adapted After Generation
+* Replaced generic `<div>` containers with semantic HTML elements (`<main>`, `<section>`, `<article>`, `<button>`) that we learned in sem 1 COS10026 Web Technology Project.
+* Removed the optional interactive energy calculator and deleted `calculator.js`.
+* Replaced advanced DOM listeners (`addEventListener`, `querySelectorAll`, `DOMContentLoaded`) with a beginner-friendly `toggleFAQ()` function using `document.getElementById()` and `onclick` attributes.
 
-The objectives of this exercise are:
+### What Was Learned
+* How to connect HTML `onclick` events to custom JavaScript functions to manipulate element classes with `classList.toggle()` in JavaScript.
+* How to troubleshoot GitHub Desktop server push errors (`Internal Server Error`) and structure clear, meaningful commit messages.
 
-- Understand how to use **GitHub for version control**
-- Practice **web development structure**
-- Build a **basic website**
-- Maintain **regular commits**
-- Identify commits that include **GenAI-generated code**
-
----
-
-# Step 1 – Fork the Repository
-
-1. Open this repository.
-2. Click **Fork** at the top right of the page.
-3. This will create a copy of the repository in your GitHub account.
-
-Example:
-
-Original repository : "github.com/rishmaf/COS30045-Data-Visualization/energy-webpage"
-
-Your forked repository : "github.com/yourusername/COS30045-Data-Visualization/energy-webpage"
-
-
----
-
-# Step 2 – Clone the Repository
-
-Clone your forked repository to your local machine using **VS Code** or the terminal.
-
-
-
-# Step 3 – Project Structure
-
-
-Your project must follow the structure below.
-
-```bash
-energy-webpage-v1
-│
-├── css
-│   └── styles.css
-│
-├── js
-│   └── scripts.js
-│
-├── images
-│   └── PowerIcon.png
-│
-├── data
-│   └── data.csv
-│
-├── index.html
-└── README.md
+### Limitations or Issues Encountered
+* Initial AI code included advanced concepts (like CSS variables) that needed to be simplified to match class teachings.
