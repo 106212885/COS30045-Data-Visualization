@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <title>Appliance Energy Consumption | Storyboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+     <header>
+        <nav class = "navbar">
+            <a href = "index.html" class = "logo-link">
+                <img src = "assets/img/powericon.png" alt = "Power Logo" class = "logo">
+            </a>
+            <ul class = "nav-links">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "televisions.html">Televisions</a></li>
+                <li><a href = "storyboard.html" class = "active">Storyboard</a></li>
+                <li><a href = "about.html">About Us</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- main content -->
+      <main class = "container">
+        <section class = "intro-header">
+            <h1>Storyboard: Telling the TV Energy Story</h1>
+            <p>How two data questions were planned, from first noticing an issue to a final recommendation.</p>
+        </section>
+
+        <section class = "story-intro">
+            <p>Before the Televisions page was written, each data question was worked through as a six-step
+                story: naming the issue, showing it in a first chart, weighing ideas for digging deeper, carrying
+                out that investigation, comparing the chart before and after refining it, and arriving at a
+                recommendation. Both storyboards are shown below.</p>
+        </section>
+
+        <section class = "story-columns">
+            <div class = "story-column">
+                <h2>Data Question 1: TV Size Distribution</h2>
+
+                <div class = "story-step">
+                    <div class = "step-number">1</div>
+                    <div>
+                        <h3>The issue</h3>
+                        <p>Do we know what TV sizes are common in the Australian market, and can the data be trusted?</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">2</div>
+                    <div>
+                        <h3>Demonstrate issue</h3>
+                        <p>A histogram (bin size 20) of 4,724 TVs shows a dip at 140&ndash;160cm, only 66 models.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">3</div>
+                    <div>
+                        <h3>Ideas to test</h3>
+                        <p>Try bin sizes 10 and 30, and check the dip against real model numbers.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">4</div>
+                    <div>
+                        <h3>The investigation</h3>
+                        <p>A 65 inch model converts to 165.1cm, confirming labels are correct, not misclassified.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">5</div>
+                    <div>
+                        <h3>Before vs after</h3>
+                        <p>Bin size 10 looked noisy, bin size 30 hid the gap, bin size 20 revealed it clearly.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">6</div>
+                    <div>
+                        <h3>Recommendation</h3>
+                        <p>The 55&ndash;63 inch range is a real gap in the market, not a data error.</p>
+                    </div>
+                </div>
+
+                <figure class = "story-figure">
+                    <img src="assets/img/Q1_histogram_before_after.png" alt="Three histograms of TV screen size at bin widths 10, 20 and 30, with the gap visible only at bin width 20">
+                    <figcaption>Histogram of screen size at three bin widths. The 140&ndash;160cm gap is visible only at bin size 20.</figcaption>
+                </figure>
+            </div>
+
+            <div class = "story-column">
+                <h2>Data Question 2: Size vs Energy</h2>
+
+                <div class = "story-step">
+                    <div class = "step-number">1</div>
+                    <div>
+                        <h3>The issue</h3>
+                        <p>Shoppers rarely realise how much a bigger TV costs to run each year.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">2</div>
+                    <div>
+                        <h3>Demonstrate issue</h3>
+                        <p>A scatter plot of size vs energy shows a rising trend, but sizes are listed in cm.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">3</div>
+                    <div>
+                        <h3>Ideas to fix this</h3>
+                        <p>Convert cm to inches, then group TVs into small, medium and large.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">4</div>
+                    <div>
+                        <h3>The process</h3>
+                        <p>Under 43 inch counts as small, 44&ndash;65 inch as medium, over 66 inch as large.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">5</div>
+                    <div>
+                        <h3>Before vs after</h3>
+                        <p>A busy scatter plot in inches became one clear bar per size group.</p>
+                    </div>
+                </div>
+
+                <div class = "story-step">
+                    <div class = "step-number">6</div>
+                    <div>
+                        <h3>Recommendation</h3>
+                        <p>Energy use jumps from 158 to 402 to 743 kWh a year, small to large.</p>
+                    </div>
+                </div>
+
+                <figure class = "story-figure">
+                    <img src="assets/img/Q2_barchart_before_after.png" alt="Two bar charts comparing energy consumption, one per exact inch size and one grouped into small, medium and large categories">
+                    <figcaption>Averaging by exact inch size is cluttered. Grouping into small, medium and large turns it into a clear comparison.</figcaption>
+                </figure>
+            </div>
+        </section>
+      </main>
+
+      <!-- footer -->
+       <footer>
+            <p>&copy; 2026 Tan Qiao En | Swinburne University of Technology</p>
+            <p class="ai-ack">With the assistance of GenAI, Google Gemini used</p>
+       </footer>
+       
+</body>
+</html>
