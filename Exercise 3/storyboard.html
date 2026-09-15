@@ -37,120 +37,48 @@
                 recommendation. Both storyboards are shown below.</p>
         </section>
 
-        <section class = "story-columns">
-            <div class = "story-column">
-                <h2>Data Question 1: TV Size Distribution</h2>
-
-                <div class = "story-step">
-                    <div class = "step-number">1</div>
-                    <div>
-                        <h3>The issue</h3>
-                        <p>Do we know what TV sizes are common in the Australian market, and can the data be trusted?</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">2</div>
-                    <div>
-                        <h3>Demonstrate issue</h3>
-                        <p>A histogram (bin size 20) of 4,724 TVs shows a dip at 140&ndash;160cm, only 66 models.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">3</div>
-                    <div>
-                        <h3>Ideas to test</h3>
-                        <p>Try bin sizes 10 and 30, and check the dip against real model numbers.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">4</div>
-                    <div>
-                        <h3>The investigation</h3>
-                        <p>A 65 inch model converts to 165.1cm, confirming labels are correct, not misclassified.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">5</div>
-                    <div>
-                        <h3>Before vs after</h3>
-                        <p>Bin size 10 looked noisy, bin size 30 hid the gap, bin size 20 revealed it clearly.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">6</div>
-                    <div>
-                        <h3>Recommendation</h3>
-                        <p>The 55&ndash;63 inch range is a real gap in the market, not a data error.</p>
-                    </div>
-                </div>
-
-                <figure class = "story-figure">
-                    <img src="assets/img/Q1_histogram_before_after.png" alt="Three histograms of TV screen size at bin widths 10, 20 and 30, with the gap visible only at bin width 20">
-                    <figcaption>Histogram of screen size at three bin widths. The 140&ndash;160cm gap is visible only at bin size 20.</figcaption>
-                </figure>
+        <section class = "storyboard-set">
+            <div class = "storyboard-title">Storyboard: how frequent is each TV size?</div>
+            <div class = "storyboard-sub">The distribution question, from noticing the gap at 140-160cm to confirming it's a real market pattern.</div>
+            <div class = "storyboard-row">
+                <div class = "sb-stage"><div class = "sb-card sb-issue"><div class = "sb-label">The issue</div><p class = "sb-text">Do we know what TV sizes are common, and can the data be trusted?</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-demo"><div class = "sb-label">Demonstrate issue</div><p class = "sb-text">A histogram (bin 20) of 4,724 TVs shows a dip at 140-160cm, only 66 models.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-ideas"><div class = "sb-label">Ideas to test</div><p class = "sb-text">Try bin sizes 10 and 30, and check the dip against real model numbers.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-invest"><div class = "sb-label">The investigation</div><p class = "sb-text">A 65 inch model converts to 165.1cm, confirming labels are correct, not misclassified.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-before"><div class = "sb-label">Before vs after</div><p class = "sb-text">Bin 10 looked noisy, bin 30 hid the gap, bin 20 revealed it clearly.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-rec"><div class = "sb-label">Recommendation</div><p class = "sb-text">The 55-63 inch range is a real market gap, not a data error.</p></div></div>
             </div>
+            <figure class = "story-figure">
+                <img src="assets/img/Q1_histogram_before_after.png" alt="Three histograms of TV screen size at bin widths 10, 20 and 30, with the gap visible only at bin width 20">
+                <figcaption>Histogram of screen size at three bin widths. The 140-160cm gap is visible only at bin size 20.</figcaption>
+            </figure>
+        </section>
 
-            <div class = "story-column">
-                <h2>Data Question 2: Size vs Energy</h2>
-
-                <div class = "story-step">
-                    <div class = "step-number">1</div>
-                    <div>
-                        <h3>The issue</h3>
-                        <p>Shoppers rarely realise how much a bigger TV costs to run each year.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">2</div>
-                    <div>
-                        <h3>Demonstrate issue</h3>
-                        <p>A scatter plot of size vs energy shows a rising trend, but sizes are listed in cm.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">3</div>
-                    <div>
-                        <h3>Ideas to fix this</h3>
-                        <p>Convert cm to inches, then group TVs into small, medium and large.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">4</div>
-                    <div>
-                        <h3>The process</h3>
-                        <p>Under 43 inch counts as small, 44&ndash;65 inch as medium, over 66 inch as large.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">5</div>
-                    <div>
-                        <h3>Before vs after</h3>
-                        <p>A busy scatter plot in inches became one clear bar per size group.</p>
-                    </div>
-                </div>
-
-                <div class = "story-step">
-                    <div class = "step-number">6</div>
-                    <div>
-                        <h3>Recommendation</h3>
-                        <p>Energy use jumps from 158 to 402 to 743 kWh a year, small to large.</p>
-                    </div>
-                </div>
-
-                <figure class = "story-figure">
-                    <img src="assets/img/Q2_barchart_before_after.png" alt="Two bar charts comparing energy consumption, one per exact inch size and one grouped into small, medium and large categories">
-                    <figcaption>Averaging by exact inch size is cluttered. Grouping into small, medium and large turns it into a clear comparison.</figcaption>
-                </figure>
+        <section class = "storyboard-set">
+            <div class = "storyboard-title">Storyboard: how does screen size impact energy consumption?</div>
+            <div class = "storyboard-sub">The cost question, from an unreadable scatter plot to a number a shopper can actually use.</div>
+            <div class = "storyboard-row">
+                <div class = "sb-stage"><div class = "sb-card sb-issue"><div class = "sb-label">The issue</div><p class = "sb-text">Shoppers rarely realise how much a bigger TV costs to run each year.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-demo"><div class = "sb-label">Demonstrate issue</div><p class = "sb-text">A scatter plot of size vs energy shows a rising trend, but sizes are listed in cm.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-ideas"><div class = "sb-label">Ideas to fix this</div><p class = "sb-text">Convert cm to inches, then group TVs into small, medium and large.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-invest"><div class = "sb-label">The process</div><p class = "sb-text">Under 43 inch is small, 44-65 inch is medium, over 66 inch is large.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-before"><div class = "sb-label">Before vs after</div><p class = "sb-text">A busy scatter plot in inches became one clear bar per size group.</p></div></div>
+                <div class = "sb-arrow">></div>
+                <div class = "sb-stage"><div class = "sb-card sb-rec"><div class = "sb-label">Recommendation</div><p class = "sb-text">Energy use jumps from 158 to 402 to 743 kWh a year, small to large.</p></div></div>
             </div>
+            <figure class = "story-figure">
+                <img src="assets/img/Q2_barchart_before_after.png" alt="Two bar charts comparing energy consumption, one per exact inch size and one grouped into small, medium and large categories">
+                <figcaption>Averaging by exact inch size is cluttered. Grouping into small, medium and large turns it into a clear comparison.</figcaption>
+            </figure>
         </section>
       </main>
 
