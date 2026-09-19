@@ -1,104 +1,81 @@
 # Exercise 3 – Data Story: TV Energy Consumption
 
-## Overview
+# COS30045 – Data Visualisation
+## Appliance Energy Consumption Website
 
-In this exercise, you will develop a **data story** based on the **TV Energy Consumption dataset**. Using the website created in **Exercise 0.2**, you will extend your work to present a meaningful narrative supported by data visualisations.
-
-Your goal is to communicate insights from the dataset in a clear and engaging way through your **website and written explanation**.
-
-You must use the **Exercise 3 folder in your existing forked repository** and reuse the files created in **Exercise 0.2**.
-
----
+## Site Structure
+- `index.html` — Home page, FAQ section
+- `televisions.html` — TV energy usage info
+- `storyboard.html` — Storyboard for the two data questions (Exercise 3)
+- `about.html` — Project and author info
 
 ## Data Story
 
-### Audience
+**Audience:** someone shopping for a new TV. Compares screen size and price, rarely thinks about running cost.
 
-The target audience for this visualisation includes:
+**Their interest:** they want to know if a bigger screen costs meaningfully more to run each year, so they can weigh that against the price and size they'd prefer.
 
-- Consumers interested in **energy-efficient televisions**
-- Policy makers and regulators interested in **energy consumption trends**
-- Researchers studying **energy efficiency in consumer electronics**
+**Question 1 — How frequent is each TV size?**
+- Histogram (bin size 20) of 4,724 TVs
+- Most common size: 120–140cm (1,251 models)
+- Gap found at 140–160cm (only 66 models)
+- Checked against model numbers (e.g. 65" = 165.1cm) — confirmed real market gap, not a data error
+- Bin size 10 = too noisy, bin size 30 = hides the gap, bin size 20 = best
 
-These audiences are interested in understanding how **television energy consumption varies across models, sizes, and technologies**, and how these factors influence overall energy usage.
-
-### Story Overview
-
-This visualisation explores patterns in **TV energy consumption** across different television models and specifications.
-
-The goal is to help viewers understand:
-
-- How energy consumption varies between television models
-- The relationship between **screen size and power consumption**
-- How **energy efficiency ratings** impact energy usage
-- Trends that may help consumers choose more **energy-efficient televisions**
-
-The website presents these insights through visualisations and explanatory text that guide the viewer through the data.
-
----
+**Question 2 — How does screen size affect energy consumption?**
+- Converted screen size from cm to inches (Expression node)
+- Grouped TVs into small (<43"), medium (44–65"), large (>66")
+- Average energy use: 158 kWh/yr (small), 402 kWh/yr (medium), 743 kWh/yr (large)
+- Large TVs use about 4.7× more energy than small TVs
 
 ## About the Data
 
-### Data Source
+**Data source**
+- Dataset of Australian TV models with screen size, labelled energy consumption, screen technology, and star rating
+- Provided as course material for COS30045
 
-The dataset used in this project contains information about **television models and their energy consumption characteristics**, including power usage, screen size, technology type, and efficiency ratings.
+**Data processing**
+- Converted screen size cm → inches
+- Grouped TVs into small/medium/large size categories
+- Removed rows missing screen size or energy value
 
-The dataset was provided as part of the course materials.
+**Privacy**
+- Dataset only contains TV model specs
+- No personal or household information
 
-### Data Processing
+**Accuracy and limitations**
+- Labelled energy consumption is a standard test figure, not real household usage
+- Dataset is a snapshot in time, may not include newer TV models
 
-Before creating visualisations, the dataset was processed to ensure it was suitable for analysis. This included:
-
-- Cleaning missing or inconsistent values
-- Selecting relevant attributes for visualisation
-- Organising the data into formats suitable for web visualisation
-
-### Privacy
-
-The dataset does not contain any **personal or sensitive information**. It focuses solely on product specifications and energy consumption data related to television devices.
-
-### Accuracy and Limitations
-
-While the dataset provides useful information about TV energy consumption, there are some limitations:
-
-- The dataset may not include **all available television models**
-- Some information may be **outdated or incomplete**
-- Energy consumption may vary depending on **real-world usage conditions**
-
-These factors should be considered when interpreting the visualisations.
-
-### Ethics
-
-When presenting data visualisations, it is important to ensure that the information is represented **accurately and responsibly**.
-
-This project follows ethical data visualisation practices by:
-
-- Avoiding misleading visual representations
-- Clearly explaining the context of the data
-- Presenting information transparently so viewers can interpret the results correctly
-
----
+**Ethics**
+- Story aims to inform buyers about running cost, not to discourage large TVs
+- Presents the trade-off (screen size vs energy cost) without pushing one choice
 
 ## AI Declaration
 
-Artificial Intelligence (AI) tools may have been used to assist with aspects of this assignment, such as:
+### Which Tool(s) Used
+* Google Gemini — original site build (Exercise 0.2)
+* Claude (Anthropic) — data analysis, storyboard, and Exercise 3 additions
 
-- Generating example code
-- Improving code structure
-- Assisting with documentation writing
+### What GenAI Was Used For
+* Guided and generated semantic HTML5 templates for site navigation (`index.html`, `televisions.html`, `about.html`)
+* Created HTML page templates and CSS styling matched to the logo palette
+* Structured JavaScript (`main.js`) for the interactive FAQ accordion
+* Troubleshot Git deployment and commit issues in GitHub Desktop
+* Analysed the TV dataset directly (bin size comparison, cm→inch conversion, size categorisation) to get real numbers
+* Generated the before/after comparison charts from the dataset
+* Built `storyboard.html`, matching the site's existing nav and colour palette
 
-All AI-generated assistance was reviewed, modified where necessary, and integrated responsibly into the project.
+### What Was Changed or Adapted After Generation
+* Replaced generic `<div>` containers with semantic HTML elements (`<main>`, `<section>`, `<article>`, `<button>`)
+* Removed the optional interactive energy calculator and deleted `calculator.js`
+* Replaced advanced DOM listeners with a beginner-friendly `toggleFAQ()` function using `onclick`
+* Simplified the storyboard CSS to plain properties (no shorthand, no CSS variables) and plain characters instead of HTML entity codes
 
----
+### What Was Learned
+* How to connect HTML `onclick` events to JavaScript functions
+* How to troubleshoot GitHub Desktop push errors and write clear commit messages
+* How a chart's bin size setting can hide or reveal real patterns in data
 
-## Website Storytelling
-
-The website has been updated to communicate a **data-driven story** based on the TV energy consumption dataset.
-
-The website includes:
-
-- Visualisations that present key insights from the dataset
-- Text explanations that help readers understand the meaning of the visualisations
-- Context that connects the data to real-world implications
-
-The aim is to guide the viewer through the data in a way that is **informative, engaging, and easy to understand**.
+### Limitations or Issues Encountered
+* Initial AI code included advanced concepts (CSS variables, shorthand properties, HTML entities) that needed simplifying to match class teachings
