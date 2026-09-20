@@ -229,6 +229,78 @@ header {
   }
 }
 
+/* SVG Shapes page */
+.ex-svg-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.ex-svg-box {
+  text-align: center;
+}
+
+.ex-svg-box svg {
+  width: 340px;
+  height: auto;
+  border: 1px solid #F8E698;
+  border-radius: 6px;
+  background: white;
+}
+
+.ex-svg-box p {
+  font-weight: bold;
+  color: #7F6946;
+  margin-top: 8px;
+}
+
+.ex-change-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+.ex-change-table th,
+.ex-change-table td {
+  border: 1px solid #F8E698;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.ex-change-table thead th {
+  background-color: #EFA627;
+  color: white;
+}
+
+.ex-change-table tbody tr:nth-child(even) {
+  background-color: #F8F3E2;
+}
+
+/* D3 Basics page */
+.d3-demo-div {
+  border: 1px solid #F8E698;
+  border-radius: 6px;
+  background-color: #FAFAF5;
+  padding: 4px 20px;
+  margin-top: 12px;
+  min-height: 20px;
+}
+
+.d3-demo-div p {
+  color: #3B3322;
+  font-weight: bold;
+}
+
+.d3-demo-svg {
+  display: block;
+  border: 1px solid #F8E698;
+  border-radius: 6px;
+  background-color: white;
+  margin-top: 12px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -245,4 +317,5 @@ footer p {
   font-size: 0.85rem;
   opacity: 0.85;
 }
+
 
