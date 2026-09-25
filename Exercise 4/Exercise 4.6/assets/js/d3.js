@@ -37,7 +37,7 @@ const drawBarChart = data => {
 // Step 2: create the svg canvas inside the responsive container
 const svg = d3.select(".responsive-svg-container") 
     .append("svg")
-      .attr("viewBox", "0 0 500 1600") // => change from 1200 (exercise 4.3) to 500 (exercise 4.5) to fit the data better
+      .attr("viewBox", "0 0 500 1600") // => change from 1200 (exercise 4.3) to 500 (exercise 4.6) to fit the data better
       .style("border", "1px solid black");
 
 // Step 3 (originally): add a hard coded test rectangle to confirm the canvas works
