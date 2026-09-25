@@ -1,8 +1,31 @@
-// Exercise 4.4
- 
-function drawBarChart(data) {
-  console.log("drawBarChart called with:", data);
-} 
+// Exercise 4.5: D3 binding and drawing with data
+
+const drawBarChart = data => {
+
+  const barHeight = 20;   // thickness of each bar
+  const spacing = 4;      // gap between bars
+
+  // Step 1: bind the data to a rect for each row, giving each one a class
+  // tied to its count value so it can be targeted individually if needed
+  svg
+    .selectAll("rect")
+    .data(data)
+    .join("rect")
+      .attr("class", d => `bar bar-${d.count}`)
+
+      // Step 2: make the bars visible
+      // width is driven by the data (d.count), height by our constant
+      .attr("width", d => d.count)
+      .attr("height", barHeight)
+      .attr("fill", "blue")
+
+      // Step 3: space the bars out along the y-axis
+      // x always starts at 0, y depends on each bar's position in the array
+      .attr("x", 0)
+      .attr("y", (d, i) => i * (barHeight + spacing));
+
+};
+
 
 // Exercise 4.3: D3 set up
 
@@ -17,14 +40,8 @@ const svg = d3.select(".responsive-svg-container")
     .attr("viewBox", "0 0 1200 1600")
     .style("border", "1px solid black");
  
-// Step 3: add a hard coded test rectangle to confirm the canvas works
-svg
-  .append("rect")
-    .attr("x", 10)
-    .attr("y", 10)
-    .attr("width", 414)
-    .attr("height", 16)
-    .attr("fill", "blue");
+// Step 3 (originally): add a hard coded test rectangle to confirm the canvas works
+
 
 // Exercise 4.4: Load data from CSV
  
