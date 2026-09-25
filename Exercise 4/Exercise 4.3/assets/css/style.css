@@ -278,29 +278,6 @@ header {
   background-color: #F8F3E2;
 }
 
-/* D3 Basics page */
-.d3-demo-div {
-  border: 1px solid #F8E698;
-  border-radius: 6px;
-  background-color: #FAFAF5;
-  padding: 4px 20px;
-  margin-top: 12px;
-  min-height: 20px;
-}
-
-.d3-demo-div p {
-  color: #3B3322;
-  font-weight: bold;
-}
-
-.d3-demo-svg {
-  display: block;
-  border: 1px solid #F8E698;
-  border-radius: 6px;
-  background-color: white;
-  margin-top: 12px;
-}
-
 footer {
   text-align: center;
   padding: 20px;
