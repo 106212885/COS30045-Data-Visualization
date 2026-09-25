@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <title>Appliance Energy Consumption | SVG Shapes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .ex-svg-row { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; margin: 24px 0; }
+        .ex-svg-box { text-align: center; }
+        .ex-svg-box svg { width: 340px; height: auto; border: 1px solid #ccc; background: #fff; }
+        .ex-svg-box p { font-weight: bold; margin-top: 8px; }
+        .ex-change-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+        .ex-change-table th, .ex-change-table td { border: 1px solid #ccc; padding: 10px 12px; text-align: left; }
+        .ex-change-table thead th { background: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <!-- navigation bar -->
+     <header>
+        <nav class = "navbar">
+            <a href = "index.html" class = "logo-link">
+                <img src = "assets/img/powericon.png" alt = "Power Logo" class = "logo">
+            </a>
+            <ul class = "nav-links">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "televisions.html">Televisions</a></li>
+                <li><a href = "storyboard.html">Storyboard</a></li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "exercise4-1.html" class = "active">SVG Shapes</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- main content -->
+      <main class = "container">
+        <section class = "intro-header">
+            <h1>SVG Shapes: Exercise 4.1</h1>
+            <p>A house and garden scene built from SVG primitives, then customised to show how each shape and attribute can change.</p>
+        </section>
+
+        <section class = "about-details">
+            <article class = "info-card">
+                <h2>Before and After</h2>
+                <p>The same house layout is shown twice. The left drawing is the original picture built from
+                    basic SVG shapes. The right drawing is the customised version, produced by moving shapes,
+                    changing fill colours, adjusting stroke attributes, and adding new items such as the chimney
+                    and the path.</p>
+
+                <div class = "ex-svg-row">
+                    <div class = "ex-svg-box">
+                        <p>Before</p>
+                        <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="800" height="450" fill="skyblue" />
+                            <rect x="0" y="450" width="800" height="250" fill="forestgreen" />
+                            <circle cx="650" cy="120" r="55" fill="gold" stroke="orange" stroke-width="3" />
+                            <polygon points="180,320 400,180 620,320" fill="chocolate" stroke="black" stroke-width="2" />
+                            <rect x="220" y="320" width="360" height="230" fill="saddlebrown" stroke="black" stroke-width="2" />
+                            <rect x="370" y="440" width="70" height="110" fill="peru" stroke="black" stroke-width="2" />
+                            <circle cx="425" cy="495" r="5" fill="black" />
+                            <g stroke="black" stroke-width="3" fill="lightblue">
+                                <g transform="translate(0,0)">
+                                    <rect x="255" y="370" width="60" height="60" />
+                                    <line x1="285" y1="370" x2="285" y2="430" />
+                                    <line x1="255" y1="400" x2="315" y2="400" />
+                                </g>
+                                <g transform="translate(220,0)">
+                                    <rect x="255" y="370" width="60" height="60" />
+                                    <line x1="285" y1="370" x2="285" y2="430" />
+                                    <line x1="255" y1="400" x2="315" y2="400" />
+                                </g>
+                            </g>
+                            <rect x="90" y="360" width="20" height="90" fill="saddlebrown" />
+                            <ellipse cx="100" cy="340" rx="45" ry="40" fill="darkgreen" />
+                            <text x="80" y="630" font-family="sans-serif" font-size="30" fill="black">My House</text>
+                        </svg>
+                    </div>
+
+                    <div class = "ex-svg-box">
+                        <p>After</p>
+                        <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="800" height="450" fill="#c9b6e4" />
+                            <rect x="0" y="450" width="800" height="250" fill="#5a8f4c" />
+                            <circle cx="650" cy="120" r="55" fill="#ffcc33" stroke="#e0a800" stroke-width="3" />
+                            <polygon points="180,320 400,180 620,320" fill="#c0392b" stroke="#5c1c14" stroke-width="3" />
+                            <rect x="480" y="220" width="35" height="90" fill="#7f8c8d" stroke="black" stroke-width="2" />
+                            <rect x="220" y="320" width="360" height="230" fill="#f2e2b6" stroke="#5c1c14" stroke-width="3" />
+                            <rect x="360" y="440" width="70" height="110" fill="#1f7a6c" stroke="black" stroke-width="2" />
+                            <circle cx="415" cy="495" r="5" fill="gold" />
+                            <g stroke="#5c1c14" stroke-width="3" fill="#aee3f0">
+                                <g transform="translate(0,0)">
+                                    <rect x="255" y="370" width="60" height="60" />
+                                    <line x1="285" y1="370" x2="285" y2="430" />
+                                    <line x1="255" y1="400" x2="315" y2="400" />
+                                </g>
+                                <g transform="translate(220,0)">
+                                    <rect x="255" y="370" width="60" height="60" />
+                                    <line x1="285" y1="370" x2="285" y2="430" />
+                                    <line x1="255" y1="400" x2="315" y2="400" />
+                                </g>
+                            </g>
+                            <rect x="90" y="360" width="20" height="90" fill="#7a4a2b" />
+                            <ellipse cx="100" cy="340" rx="45" ry="40" fill="#2e7d32" />
+                            <path d="M 395 550 Q 380 620, 395 690" fill="none" stroke="#b0a89a" stroke-width="20" />
+                            <text x="80" y="630" font-family="sans-serif" font-size="30" fill="#333">My Cottage</text>
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article class = "info-card">
+                <h2>What Changed</h2>
+                <p>The table below lists each shape that moved or was added, giving its position before and
+                    after customisation. Colour and stroke changes that did not involve a position change are
+                    described underneath the table.</p>
+
+                <table class = "ex-change-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Element</th>
+                            <th colspan="2">Before</th>
+                            <th colspan="2">After</th>
+                        </tr>
+                        <tr>
+                            <th>x=</th>
+                            <th>y=</th>
+                            <th>x=</th>
+                            <th>y=</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Door (rect)</td>
+                            <td>370</td>
+                            <td>440</td>
+                            <td>360</td>
+                            <td>440</td>
+                        </tr>
+                        <tr>
+                            <td>Door handle (circle)</td>
+                            <td>425</td>
+                            <td>495</td>
+                            <td>415</td>
+                            <td>495</td>
+                        </tr>
+                        <tr>
+                            <td>Chimney (rect)</td>
+                            <td>not present</td>
+                            <td>not present</td>
+                            <td>480</td>
+                            <td>220</td>
+                        </tr>
+                        <tr>
+                            <td>Path (curve)</td>
+                            <td>not present</td>
+                            <td>not present</td>
+                            <td>starts at 395</td>
+                            <td>starts at 550</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>The sky changed from skyblue to a light lavender, and the ground changed from forestgreen to
+                    a warmer green. The roof fill changed from chocolate to red and its stroke width increased
+                    from 2 to 3. The house body fill changed from saddlebrown to cream, and the door fill changed
+                    from peru to teal. The windows kept the exact same group structure in both versions: one
+                    outer <code>&lt;g&gt;</code> sets a shared stroke and fill for both windows, and each window
+                    sits in its own inner <code>&lt;g transform="translate(x,0)"&gt;</code>, so the pair could be
+                    restyled without touching each shape individually.</p>
+            </article>
+        </section>
+      </main>
+
+      <!-- footer -->
+       <footer>
+            <p>&copy; 2026 Tan Qiao En | Swinburne University of Technology</p>
+            <p class="ai-ack">With the assistance of GenAI, Claude used</p>
+       </footer>
+       
+</body>
+</html>
