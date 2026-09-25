@@ -278,6 +278,14 @@ header {
   background-color: #F8F3E2;
 }
 
+/* Exercise 4.3: responsive svg container */
+.responsive-svg-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
