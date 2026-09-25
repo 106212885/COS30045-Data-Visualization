@@ -21,4 +21,4 @@ d3.select("svg")
     .attr("y", 50)
     .attr("width", 100)
     .attr("height", 30)
-    .style("fill", "green");
+    .style("fill", "green"); 
