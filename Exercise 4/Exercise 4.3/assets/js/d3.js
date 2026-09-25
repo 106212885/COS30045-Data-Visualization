@@ -1,24 +1,21 @@
-// Exercise 4.2: Manipulate and add elements to a webpage with D3
-
-// Step 2: select an existing HTML element and change its style
-d3.select("h1")
-  .style("color", "green");
-
-// Step 3: append a paragraph with text into the empty div on this page
-d3.select("div")
-  .append("p")
-    .text("Purchasing a low energy consumption TV will help with your energy bills!");
-
-// Step 4: append a rectangle to the empty svg on this page
-// First append with no attributes - this exists in the DOM but is not visible
-d3.select("svg")
-  .append("rect");
-
-// Now append a second rectangle with attributes so it can actually be seen
-d3.select("svg")
+// Exercise 4.3: D3 set up
+ 
+// Step 1: the Exercise 4.2 code (selecting the h1, appending a paragraph
+// and a rectangle with no data behind them) has been deleted here, as
+// instructed. Only the script tags loading the D3 library and this file,
+// in index.html, remain from that exercise.
+ 
+// Step 2: create the svg canvas inside the responsive container
+const svg = d3.select(".responsive-svg-container")
+  .append("svg")
+    .attr("viewBox", "0 0 1200 1600")
+    .style("border", "1px solid black");
+ 
+// Step 3: add a hard coded test rectangle to confirm the canvas works
+svg
   .append("rect")
-    .attr("x", 50)
-    .attr("y", 50)
-    .attr("width", 100)
-    .attr("height", 30)
-    .style("fill", "green"); 
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("width", 414)
+    .attr("height", 16)
+    .attr("fill", "blue");
