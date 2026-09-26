@@ -28,16 +28,18 @@ const drawBarChart = data => {
     .join("rect")
       .attr("class", d => `bar bar-${d.count}`)
 
-      // Step 2: make the bars visible
-      // width is driven by the data (d.count), height by our constant
-      .attr("width", d => d.count)
-      .attr("height", barHeight)
+
+    // Exercise 4.6: Scaling charts (xScale and yScale)
+
+      // Step 2: width now comes from the linear scale instead of the raw
+      // count value, so it always fits inside the svg
+      .attr("width", d => xScale(d.count))
+      .attr("height", yScale.bandwidth())
       .attr("fill", "blue")
 
-      // Step 3: space the bars out along the y-axis
-      // x always starts at 0, y depends on each bar's position in the array
+      // Step 3: y position and bar thickness now come from the band scale
       .attr("x", 0)
-      .attr("y", (d, i) => i * (barHeight + spacing));
+      .attr("y", d => yScale(d.brand));
 
 };
 
@@ -52,7 +54,7 @@ const drawBarChart = data => {
 // Step 2: create the svg canvas inside the responsive container
 const svg = d3.select(".responsive-svg-container") 
     .append("svg")
-      .attr("viewBox", "0 0 500 1600") // => change from 1200 (exercise 4.3) to 500 (exercise 4.6) to fit the data better
+      .attr("viewBox", "0 0 600 800") // => change it to 600 x 800
       .style("border", "1px solid black");
 
 // Step 3 (originally): add a hard coded test rectangle to confirm the canvas works
