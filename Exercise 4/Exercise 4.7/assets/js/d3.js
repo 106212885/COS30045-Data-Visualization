@@ -1,4 +1,5 @@
 // Exercise 4.6: Scaling charts
+
 const drawBarChart = data => {
 
   // Step 1: linear scale for the count data (x-axis)
@@ -18,31 +19,51 @@ const drawBarChart = data => {
     .padding(0.2);
 
 
-// Exercise 4.5: D3 binding and drawing with data
+// Exercise 4.7: Adding labels
 
-  // Step 1: bind the data to a rect for each row, giving each one a class
-  // tied to its count value so it can be targeted individually if needed
-  svg
-    .selectAll("rect")
+  // left margin reserved for the brand name labels (Exercise 4.7 Step 1)
+  const leftMargin = 100;
+
+  // Step 2: a group per row, holding that row's rect and its two text
+  // labels together so they move as one unit
+  const barAndLabel = svg
+    .selectAll("g")
     .data(data)
-    .join("rect")
+    .join("g")
+      .attr("transform", d => `translate(0, ${yScale(d.brand)})`);
+
+  // Step 3: the bar itself
+  // x is now the shared leftMargin instead of 0, making room for labels.
+  // y is 0 here (not yScale(d.brand)) since the group's own transform
+  // above already handles vertical position
+  barAndLabel
+    .append("rect")
       .attr("class", d => `bar bar-${d.count}`)
-
-
-    // Exercise 4.6: Scaling charts (xScale and yScale)
-
-      // Step 2: width now comes from the linear scale instead of the raw
-      // count value, so it always fits inside the svg
+      .attr("x", leftMargin)
+      .attr("y", 0)
       .attr("width", d => xScale(d.count))
       .attr("height", yScale.bandwidth())
-      .attr("fill", "blue")
+      .attr("fill", "blue");
 
-      // Step 3: y position and bar thickness now come from the band scale
-      .attr("x", 0)
-      .attr("y", d => yScale(d.brand));
+  // Step 4: the brand name, right-aligned just to the left of the bar
+  barAndLabel
+    .append("text")
+      .text(d => d.brand)
+      .attr("x", leftMargin - 10)
+      .attr("y", 15)
+      .attr("text-anchor", "end")
+      .style("font-size", "13px");
+
+  // Step 5: the count value, sitting just past the end of each bar
+  barAndLabel
+    .append("text")
+      .text(d => d.count)
+      .attr("x", d => leftMargin + xScale(d.count) + 5)
+      .attr("y", 15)
+      .style("font-size", "13px");
 
 };
-
+ 
 
 // Exercise 4.3: D3 set up
 
