@@ -1,9 +1,24 @@
-// Exercise 4.5: D3 binding and drawing with data
-
+// Exercise 4.6: Scaling charts
 const drawBarChart = data => {
 
-  const barHeight = 20;   // thickness of each bar
-  const spacing = 4;      // gap between bars
+  // Step 1: linear scale for the count data (x-axis)
+  // domain covers 0 up to a bit above our highest count (1096), giving
+  // some headroom. range is kept inside the viewBox width (600), leaving
+  // 200px of space on the right for labels in Exercise 4.7
+  const xScale = d3.scaleLinear()
+    .domain([0, 1100])
+    .range([0, 400]);
+
+  // Step 2: band scale for the brand categories (y-axis)
+  // domain is every brand name in the data, range is the chart height.
+  // padding adds a gap between bars instead of them sitting flush together
+  const yScale = d3.scaleBand()
+    .domain(data.map(d => d.brand))
+    .range([0, 800])
+    .padding(0.2);
+
+
+// Exercise 4.5: D3 binding and drawing with data
 
   // Step 1: bind the data to a rect for each row, giving each one a class
   // tied to its count value so it can be targeted individually if needed
