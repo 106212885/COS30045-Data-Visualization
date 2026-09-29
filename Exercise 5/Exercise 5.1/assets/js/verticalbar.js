@@ -97,7 +97,7 @@ const drawVerticalBarChart = data => {
     d3.csv("data/Data_exercise 5.1-1.csv", d => {
         return {
             Screen_Tech: d.Screen_Tech,
-            Energy_Consumption: +d["Mean (Labelled energy consumption (kWh/year))"]
+            Energy_Consumption: +d["Mean(Labelled energy consumption (kWh/year))"]
         };
     }).then(data => {
         
