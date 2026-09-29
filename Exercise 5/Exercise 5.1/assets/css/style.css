@@ -125,6 +125,31 @@ header {
   margin: 0;
 }
 
+/* Exercise 5.1: vertical bar chart container */
+#vertical-bar-chart {
+  margin: 30px auto;
+  max-width: 700px;
+}
+ 
+#vertical-bar-chart svg {
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+}
+ 
+#vertical-bar-chart .bar {
+  transition: opacity 0.2s ease;
+}
+ 
+#vertical-bar-chart .bar:hover {
+  opacity: 0.7;
+}
+ 
+#vertical-bar-chart .x-axis text,
+#vertical-bar-chart .y-axis text {
+  font-size: 12px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
