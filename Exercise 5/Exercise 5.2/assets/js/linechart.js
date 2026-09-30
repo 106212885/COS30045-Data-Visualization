@@ -22,12 +22,12 @@ const drawLineChart = data => {
     // Step 4: scales 
     // xScale: Year, continous data so scaleLinear, using extent to get min/max in one go 
     const xScale = d3.scaleLinear()
-        .domain(d3.extent(data, d => d.Year))
+        .domain(d3.extent(data, d => d.year))
         .range([0, innerWidth]);
 
     // yScale: Average Price, also continous 
     const yScale = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.AveragePrice)])
+        .domain([0, d3.max(data, d => d.averagePrice)])
         .nice()
         .range([innerHeight, 0]);
 
@@ -61,16 +61,17 @@ const drawLineChart = data => {
         .data(data)
         .join("circle")
         .attr("class", "point")
-        .attr("cx", d => xScale(d.Year))
-        .attr("cy", d => yScale(d.AveragePrice))
+        .attr("r", 4)
+        .attr("cx", d => xScale(d.year))
+        .attr("cy", d => yScale(d.averagePrice))
         .attr("fill", "green");
 
     // Step 8: line generator 
     // maps each data point's year/ averagePrice through the same scales
     // used for the axes and circles, so the lines up with them
     const lineGenerator = d3.line()
-        .x(d => xScale(d.Year))
-        .y(d => yScale(d.AveragePrice));
+        .x(d => xScale(d.year))
+        .y(d => yScale(d.averagePrice));
         
     // Step 9: draw the line 
     innerChart 
