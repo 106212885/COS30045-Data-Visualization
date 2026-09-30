@@ -47,27 +47,16 @@ const drawVerticalBarChart = data => {
         .attr("class", "y-axis")
         .call(leftAxis);
 
-    // Step 6: y-axis label
-    innerChart
-        .append("text")
-        .attr("x", -innerHeight /2)
-        .attr("y", 45)
-        .attr("transform", "rotate(-90)")
-        .attr("text-anchor", "middle")
-        .style("font-size", "13px")
-        .text("Mean Energy Consumption (kWh/year)");
-
-    // Step 7: chart title
+    // Step 6: y-axis label & chart title
     svg
-        .append("text")
-        .attr("x", width / 2)
-        .attr("y", 20)
-        .attr("text-anchor", "middle")
-        .style("font-size", "15px")
-        .style("font-weight", "bold")
-        .text("Average Energy Consumption by Screen Type (55 inch TVs)");
+    .append("text")
+    .attr("x", margin.left-45)
+    .attr("y", 20)
+    .attr("text-anchor", "start")
+    .style("font-size", "15px")
+    .text("Energy Consumption (kWh)");
         
-    // Step 8: bars
+    // Step 7: bars
     innerChart
         .selectAll(".bar")
         .data(data)
@@ -79,7 +68,7 @@ const drawVerticalBarChart = data => {
         .attr("height", d => innerHeight - yScale(d.Energy_Consumption))
         .attr("fill", "green");
 
-    // Step 9: value labels on top of each bar
+    // Step 8: value labels on top of each bar
     innerChart
         .selectAll(".bar-label")
         .data(data)
@@ -89,7 +78,7 @@ const drawVerticalBarChart = data => {
         .attr("y", d => yScale(d.Energy_Consumption) - 8)
         .attr("text-anchor", "middle")
         .style("font-size", "12px")
-        .text(d => `${d.Energy_Consumption.toFixed(1)} kWh`);
+        .text(d => `${Math.round(d.Energy_Consumption)} kWh`);
 
     };
 
