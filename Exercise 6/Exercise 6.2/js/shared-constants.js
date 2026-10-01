@@ -20,3 +20,31 @@ const binGenerator = d3.bin()
   .value(d => d.energyConsumption)
   .domain([0, 2000]) // added this on Exercise 6.2
   .thresholds(d3.range(200, 2000, 200));
+
+// Exercise 6.2: filter buttons
+// Filter definitions: id (matches the data), label (shown to users), isActive (starting state)
+const screenFilters = [
+  { id: "all",  label: "All",  isActive: true },
+  { id: "LED",  label: "LED",  isActive: false },
+  { id: "LCD",  label: "LCD",  isActive: false },
+  { id: "OLED", label: "OLED", isActive: false }
+];
+
+const sizeFilters = [
+  { id: "all", label: "All Sizes", isActive: true },
+  { id: "24",  label: '24"',       isActive: false },
+  { id: "32",  label: '32"',       isActive: false },
+  { id: "55",  label: '55"',       isActive: false },
+  { id: "65",  label: '65"',       isActive: false },
+  { id: "98",  label: '98"',       isActive: false }
+];
+
+// Current filter selections (both filters combine)
+const filterState = { screenTech: "all", screenSize: "all" };
+
+// Transition settings (experiment with these)
+const transitionDuration = 600;
+const transitionEase = d3.easeCubicOut;
+
+// Extension: set true to rescale the y-axis after every filter
+const rescaleYAxis = false;
