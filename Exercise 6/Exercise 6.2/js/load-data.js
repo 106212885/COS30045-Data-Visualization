@@ -10,6 +10,6 @@ d3.csv("data/Ex6_TVdata_withStar.csv", d => ({
   energyConsumption: +d.energyConsumption
 })).then(data => {
   console.log("Rows loaded:", data.length);
-  console.log(data[0]);
-  drawHistogram(data);
+  drawHistogram(data); // Removed console.log(data[0]) from Exercise 6.1
+  populateFilters(); // Exercise 6.2
 }).catch(err => console.error("Data failed to load:", err));
