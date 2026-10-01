@@ -15,7 +15,8 @@ const axisColor = "#7F6946";
 const xScale = d3.scaleLinear().range([0, chartWidth]);
 const yScale = d3.scaleLinear().range([chartHeight, 0]);
 
-// Bin generator (shared so Exercise 6.2 filters can reuse it)
+// Bin generator 
 const binGenerator = d3.bin()
   .value(d => d.energyConsumption)
-  .thresholds(d3.range(0, 3000, 200));
+  .domain([0, 2000]) // added this on Exercise 6.2
+  .thresholds(d3.range(200, 2000, 200));
