@@ -78,7 +78,7 @@ const drawDonutChart = data => {
 };
  
 // Load the data, type-convert it, then draw the chart
-d3.csv("data/Data_exercise_5_3.csv", d => {
+d3.csv("data/Data_exercise 5.3.csv", d => {
     return {
         size: d.Screensize_Category,
         count: +d.Count
