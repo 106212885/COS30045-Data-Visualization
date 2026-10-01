@@ -1,3 +1,4 @@
+/* Exercise 6.1: Histogram */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -11,3 +12,19 @@ body {
   padding: 0 20px;
 }
 h1 { color: #7F6946; }
+
+/* Exercise 6.2: filter buttons */
+.filter-button {
+  background-color: #D2691E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  margin: 10px 8px 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.filter-button:hover { background-color: #B5571A; }
+.filter-button.active { background-color: #FFCB80; }
