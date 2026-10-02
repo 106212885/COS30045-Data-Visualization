@@ -1,4 +1,4 @@
-// Exercise 6.1: Histogram
+// ---------- Exercise 6.1: Histogram ----------
 
 // Chart dimensions (Dufour & Meeks inner chart approach)
 const svgWidth = 1000, svgHeight = 520;
