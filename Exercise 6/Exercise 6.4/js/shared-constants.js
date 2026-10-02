@@ -68,4 +68,5 @@ const tooltipWidth = 190;
 const tooltipHeight = 78;
 const tooltipWidthH = 150;
 const tooltipHeightH = 56;
+const tooltipColorH = "#D2691E"; // color of the histogram tooltip
 
