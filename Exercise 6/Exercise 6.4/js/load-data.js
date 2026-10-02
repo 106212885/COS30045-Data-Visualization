@@ -1,4 +1,4 @@
-// Exercise 6.1: Histogram
+// ---------- Exercise 6.1: Histogram ----------
 
 // Loads the TV data and hands it to the chart. Runs after D3 is available.
 d3.csv("data/Ex6_TVdata_withStar.csv", d => ({

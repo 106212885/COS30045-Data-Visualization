@@ -1,9 +1,9 @@
-// Exercise 6.2: filter buttons
+// ---------- Exercise 6.2: filter buttons ----------
 
 let allData = [];
 let innerChart, yAxisGroup;
 
-// Exercise 6.1: Histogram 
+// ---------- Exercise 6.1: Histogram ----------
 function drawHistogram(data) {
   allData = data; 
 
@@ -15,7 +15,7 @@ function drawHistogram(data) {
   innerChart = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-  // Exercise 6.2: filter buttons
+  // ---------- Exercise 6.2: filter buttons ----------
   // Scale domains come from the full data set so the axes stay fixed when filtering
   const bins = binGenerator(allData);
   const minX = bins[0].x0;

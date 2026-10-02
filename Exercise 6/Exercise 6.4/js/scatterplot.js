@@ -1,4 +1,4 @@
-// Exercise 6.3: scatterplot (star rating vs energy consumption, coloured by screen type)
+// ---------- Exercise 6.3: scatterplot (star rating vs energy consumption, coloured by screen type) ----------
 
 let allDataS = [];
 
