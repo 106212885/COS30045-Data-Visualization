@@ -21,7 +21,7 @@ const binGenerator = d3.bin()
   .domain([0, 2000]) // added this on Exercise 6.2
   .thresholds(d3.range(200, 2000, 200));
 
-// Exercise 6.2: filter buttons
+// ---------- Exercise 6.2: filter buttons ----------
 // Filter definitions: id (matches the data), label (shown to users), isActive (starting state)
 const screenFilters = [
   { id: "all",  label: "All",  isActive: true },
@@ -61,6 +61,7 @@ const colorScale = d3.scaleOrdinal()
   .domain(["LED", "LCD", "OLED"])
   .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
 
-// Tooltip size (used by the tooltip in Exercise 6.4)
+// Tooltip size (scatterplot, then histogram)
 const tooltipWidth = 150;
 const tooltipHeight = 70;
+
