@@ -48,3 +48,19 @@ const transitionEase = d3.easeCubicOut;
 
 // Extension: set true to rescale the y-axis after every filter
 const rescaleYAxis = false;
+
+
+// ---------- Exercise 6.3: scatterplot ----------
+// Separate names (the S is for scatterplot) so they do not clash with the histogram's
+let innerChartS;
+const xScaleS = d3.scaleLinear().range([0, chartWidth]);
+const yScaleS = d3.scaleLinear().range([chartHeight, 0]);
+
+// Colour scale: one hue per screen type (hue suits categories, lightness would imply magnitude)
+const colorScale = d3.scaleOrdinal()
+  .domain(["LED", "LCD", "OLED"])
+  .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
+
+// Tooltip size (used by the tooltip in Exercise 6.4)
+const tooltipWidth = 150;
+const tooltipHeight = 70;
