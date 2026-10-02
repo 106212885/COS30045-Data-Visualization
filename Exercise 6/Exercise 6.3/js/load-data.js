@@ -11,5 +11,8 @@ d3.csv("data/Ex6_TVdata_withStar.csv", d => ({
 })).then(data => {
   console.log("Rows loaded:", data.length);
   drawHistogram(data); // Removed console.log(data[0]) from Exercise 6.1
-  populateFilters(); // Exercise 6.2
+  populateFilters(); // Exercise 6.2: filter buttons
+  drawScatterplot(data);
+  createTooltip();       // Exercise 6.3: Scatter Plot
+  handleMouseEvents();   // Exercise 6.3
 }).catch(err => console.error("Data failed to load:", err));
