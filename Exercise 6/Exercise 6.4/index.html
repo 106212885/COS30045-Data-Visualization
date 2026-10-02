@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Consumption | Histogram</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Television Energy Consumption</h1>
+    <p>Distribution of labelled energy consumption (kWh/year) across TVs in the Jan 2026 data set.</p>
+    <!-- Exercise 6.1: histogram container -->
+    <div id="histogram" class="chart-container"></div>
+
+    <!-- Exercise 6.2 extension: screen type & size filter buttons -->
+    <div id="filters_screen"></div>
+    <div id="filters_size"></div>
+
+    <!-- Exercise 6.3: scatterplot -->
+    <div id="scatterplot" class="responsive-svg-container"></div>
+  </main>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+  <script src="js/scatterplot.js"></script>
+</body>
+</html>
